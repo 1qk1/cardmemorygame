@@ -1,0 +1,86 @@
+/* .Card {
+  width: 180px;
+  height: 250px;
+  margin: 4px;
+  transition: all 0.15s ease-in;
+  transform: rotateY(180deg);
+  position: relative;
+  cursor: pointer;
+}
+
+.Card .Card__Side {
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card__Side--Back {
+  background-color: #fff;
+}
+
+.Card.Card--Turned {
+  transform: rotateY(0);
+}
+
+.Card span {
+  font-size: 8rem;
+  background: linear-gradient(45deg, rgba(75,218,130,1) 0%, rgba(33,215,192,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.Card {
+  width: 160px;
+  height: 210px;
+  transform-style: preserve-3d;
+  transition: all 0.15s ease-in;
+  position: relative;
+  cursor: pointer;
+  margin: 0.5rem auto;
+}
+.Card.Card--Turned {
+  transform: rotateY(180deg);
+}
+.Card .Card__Side {
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Card .Card__Side--Back {
+  transform: rotateY(180deg);
+}
+
+.Card span {
+  font-size: 6rem;
+  background: linear-gradient(45deg, rgba(75,218,130,1) 0%, rgba(33,215,192,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 960px) {
+  .Card {
+    width: 22%;
+    height: 23%;
+  }
+}
+
+@media (max-width: 650px) {
+  .Card span {
+    font-size: 16vw;
+  }
+}

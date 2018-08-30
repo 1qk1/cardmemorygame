@@ -1,0 +1,43 @@
+.Settings {
+  width: 100%;
+  background-color: #fff;
+  font-size: 1.1em;
+  text-align: center;
+  z-index: 2;
+  border-radius: 0.25rem;
+  padding: 1vh 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+.Settings__Section {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.Settings__Row {
+  display: inline-block;
+}
+
+.Settings span {
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.Settings--Center {
+  position: absolute;
+  padding: 2vh 0;
+  top: 40%;
+}
+
+@media (max-width: 767px) {
+  .Settings__Row {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .Settings button {
+    font-size: 0.7em;
+    padding: 0.4rem;
+  }
+}

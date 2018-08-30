@@ -1,0 +1,50 @@
+.Container {
+  margin: auto;
+  max-width: 768px;
+  width: 100%;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+}
+
+.Game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+
+.Button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.Button--Green {
+  background-color: #5cb85c;
+  border: 1px solid #49b949;
+  color: #fff;
+}
+
+.Button--Red {
+  background-color: #d9534f;
+  border: 1px solid #c8403b;
+  color: #fff;
+}
+
+.Button--Yellow {
+  background-color: #f0ad4e;
+  border: 1px solid #dd993a;
+  color: #fff;
+}

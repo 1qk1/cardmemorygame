@@ -1,0 +1,15 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+}
+
+#root {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background: rgb(75,218,130);
+  background: linear-gradient(45deg, rgba(75,218,130,1) 0%, rgba(33,215,192,1) 100%);
+}
