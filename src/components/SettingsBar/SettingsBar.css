@@ -5,12 +5,19 @@
   text-align: center;
   z-index: 2;
   border-radius: 0.25rem;
-  padding: 1vh 0;
+  padding: 2vh 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  top: 0;
+  top: 40%;
+  position: absolute;
+  transition: all 0.1s ease-out;
+}
+
+.Settings .Button {
+  transition: all 0.075s ease-out;
 }
 
 .Settings__Section {
+  transition: all 0.1s ease-out;
   display: inline-block;
   margin: 0 1rem;
 }
@@ -24,10 +31,13 @@
   cursor: pointer;
 }
 
-.Settings--Center {
-  position: absolute;
-  padding: 2vh 0;
-  top: 40%;
+.Settings--Top {
+  padding: 1vh 0;
+  top: 0;
+}
+
+.Settings--Top.Top {
+  position: static;
 }
 
 @media (max-width: 767px) {
@@ -40,4 +50,16 @@
     font-size: 0.7em;
     padding: 0.4rem;
   }
+}
+
+.Settings .Hidden {
+  transform: scale(0);
+}
+
+.Settings .Invisible {
+  opacity: 0;
+}
+
+.Settings .Show {
+  opacity: 1;
 }

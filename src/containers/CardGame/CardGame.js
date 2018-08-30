@@ -9,10 +9,11 @@ class CardGame extends Component {
     pairs: [],
     turned: [],
     foundPairs: [],
-    pairNum: 8,
+    pairNum: 4,
     gameOn: false,
     counting: false,
     won: false,
+    settingsTop: false,
     timer: 0 //in milliseconds
   }
 
@@ -30,15 +31,11 @@ class CardGame extends Component {
   }
   startGame = () => {
     this.initGame();
-    const settingsEl = document.getElementsByClassName('Settings')[0];
-    if (settingsEl.classList.contains('Settings--Center')) {
-      settingsEl.classList.remove('Settings--Center');
-    }
     let initTurned = [];
     for (let i = 0; i < this.state.pairNum; i++){
       initTurned.push(i, this.state.pairNum * 2 - i - 1);
     }
-    this.setState(() => ({turned: initTurned, gameOn: true}));
+    this.setState(() => ({turned: initTurned, gameOn: true, settingsTop: true}));
     this.timer = setInterval(() => {
       if (this.state.counting) {
         this.setState(() => ({timer: this.state.timer + 1000}));
@@ -147,6 +144,7 @@ class CardGame extends Component {
             stop={this.initGame}
             gameOn={this.state.gameOn}
             pairNum={this.state.pairNum}
+            top={this.state.settingsTop}
             addPairs={() => this.pairsHandler('add')} 
             removePairs={() => this.pairsHandler('sub')}
           />
