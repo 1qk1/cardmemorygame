@@ -63,3 +63,9 @@
 .Settings .Show {
   opacity: 1;
 }
+
+.Settings .Disabled {
+  border: 1px solid #b0b0b0;
+  background-color: #ccc;
+  cursor: not-allowed;
+}

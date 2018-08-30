@@ -27,18 +27,9 @@ const settingsBar = ({pairNum, addPairs, removePairs, gameOn, start, stop, timer
           <div className="Settings__Section">
             <button onClick={start} className={!gameOn ? 'Button Button--Green' : 'Button Button--Yellow'}>{!gameOn ? 'Start' : 'New Game'}</button>
           </div>
-          <CSSTransition in={gameOn} timeout={75} classNames={{
-            exitActive: 'Hidden',
-            enter: 'Invisible',
-            enterActive: 'Show'
-          }}
-          mountOnEnter
-          unmountOnExit
-          >
-            <div className="Settings__Section">
-              <button onClick={stop} className='Button Button--Red'>Stop Game</button>
-            </div>
-          </CSSTransition>
+          <div className="Settings__Section">
+            <button onClick={stop} disabled={!gameOn} className={'Button Button--Red ' + (!gameOn ? 'Disabled' : '')}>Stop Game</button>
+          </div>
         </div>
       </div>
     </CSSTransition>
